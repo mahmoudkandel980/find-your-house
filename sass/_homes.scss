@@ -1,0 +1,92 @@
+.homes {
+    grid-column: col-start 1 / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6.4rem;
+
+    .home {
+        background-color: var(--color-grey-light-1);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3.6rem;
+
+        &__img {
+            width: 100%;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+        &__like {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            fill: var(--color-primary);
+            height: 2.4rem;
+            width: 2.4rem;
+            justify-self: end;
+            margin: 1.2rem;
+        }
+
+        &__name {
+            font-size: 1.6rem;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            justify-self: center;
+            font-family: var(--font-display);
+            padding: 1.2rem;
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            font-weight: 400;
+            text-align: center;
+            width: 80%;
+            align-self: end;
+            transform: translateY(50%);
+        }
+
+        &__location,
+        &__rooms {
+            margin-top: 2.4rem;
+        }
+
+        &__location,
+        &__rooms,
+        &__price,
+        &__area,
+        &__price {
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            align-items: center;
+            margin-left: 2.4rem;
+
+            justify-self: start;
+            svg {
+                height: 2rem;
+                width: 2rem;
+                fill: var(--color-primary);
+            }
+
+            p {
+                font-size: 1.4rem;
+                margin-left: 1.2rem;
+            }
+        }
+
+        &__btn {
+            grid-column: 1/-1;
+        }
+    }
+
+    @media (max-width: $bp-small) {
+        .home:not(:last-child) {
+            margin-bottom: 6.4rem;
+        }
+    }
+}
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

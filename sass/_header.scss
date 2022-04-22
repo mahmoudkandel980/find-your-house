@@ -1,0 +1,77 @@
+.header {
+    grid-column: sidebar-start / col-end 6;
+    grid-row: 1;
+
+    @media (max-width: $bp-medium) {
+        grid-column: sidebar-start / -1;
+    }
+
+    background-image: linear-gradient(
+            rgba($color-secondary, 0.93),
+            rgba($color-secondary, 0.93)
+        ),
+        url(../img/hero.jpeg);
+    background-size: cover;
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    row-gap: 1.6rem;
+    align-items: start;
+    justify-items: start;
+    justify-content: center;
+    padding: 4rem 12.8rem 8rem 12.8rem;
+
+    @media (max-width: $bp-small) {
+        padding: 4rem 4rem 8rem 4.8rem;
+    }
+
+    &__logo {
+        height: 3rem;
+        justify-self: center;
+    }
+
+    &__btn {
+        align-self: start;
+        justify-self: start;
+    }
+
+    &__seenon-text {
+        justify-self: stretch;
+        font-size: 1.6rem;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        column-gap: 1.6rem;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: currentColor;
+        }
+    }
+
+    &__Seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 3.2rem;
+        justify-items: center;
+        align-items: center;
+
+        img {
+            max-height: 2.5rem;
+            max-width: 100%;
+            filter: brightness(60%);
+        }
+    }
+}
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
