@@ -7,6 +7,14 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 5vw);
     gap: 1.6rem;
+    
+     @media (max-width: $bp-medium) {
+        gap: 1rem;
+    }
+
+    @media (max-width: $bp-small) {
+        gap: 0.4rem;
+    }
 
     &__item {
         &--1 {
